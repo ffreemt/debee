@@ -6,6 +6,7 @@ align de-en texts, fast
 ## Pre-install
     `pyicu`, `pycld2`, `fasttext` (`polyglot` depends on pyicu` and `pycld2` while fastlid depends on `fasttext`).
 ### Linux and friends
+For example for Ubuntu
 ```bash
 apt-get install libicu-dev pkg-config
 pip install pyicu==2.8 pycld2 fasttext
