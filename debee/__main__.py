@@ -40,7 +40,7 @@ ic.enable()
 app = typer.Typer(
     name="debee",
     add_completion=False,
-    help="en-zh-bee aligner",
+    help="de-en-bee aligner",
 )
 
 esp_min_samples_expl = dedent(
@@ -62,7 +62,7 @@ def main(
     files: List[str] = typer.Argument(
         ...,
         metavar="file1 [file2]...",
-        help="files (absolute or relative paths) to be aligned; if only one file is specified, the -s flag must be used to signal it's an german/chinese mixed text file and needs to be separated.",
+        help="files (absolute or relative paths) to be aligned; if only one file is specified, the -s flag must be used to signal it's an german/english mixed text file and needs to be separated.",
     ),
     eps: float = typer.Option(10, help="epsilon"),
     min_samples: int = typer.Option(
@@ -73,7 +73,7 @@ def main(
         "--need-sep",
         "-s",
         is_flag=True,
-        help="Separate input files that are mixed german and chinese text.",
+        help="Separate input files that are mixed german and english text.",
     ),
     show_plot: bool = typer.Option(
         False,
@@ -104,7 +104,7 @@ def main(
         is_eager=True,
     ),
 ):
-    """Align de-zh texts, fast.
+    """Align de-en texts, fast.
 
     e.g.
 
@@ -166,7 +166,7 @@ def main(
         logger.debug("len1: %s, len2: %s", len(list1), len(list2))
 
     # other cases: 2 files + need_sep not set, 3 or or files
-    else:  # assume mixed german/chinese, separate
+    else:  # assume mixed german/english, separate
         list1 = []
         list2 = []
         text = ""
