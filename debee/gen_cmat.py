@@ -1,5 +1,5 @@
 """Gen cmat for de/en text."""
-# pylint: disable=
+# pylint: disable=invalid-name, too-many-branches
 
 from typing import List, Optional
 
@@ -38,6 +38,8 @@ def gen_cmat(
     Args:
         text1: typically '''...''' splitlines()
         text2: typically '''...''' splitlines()
+        model: vectorizer, will be generated on the fly if None
+        remove_punctuation: when True, remove punctuation in en
 
     text1 = 'this is a test'
     text2 = 'another test'
@@ -79,7 +81,7 @@ def gen_cmat(
         )
 
     def tfunc(text):
-        """Handle text"""
+        """Handle text."""
         _ = remove_punct(text)  # to make pyright happy
         if isinstance(_, str):
             text = [_]

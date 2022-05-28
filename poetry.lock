@@ -156,8 +156,8 @@ word2word = ">=1.0.0,<2.0.0"
 
 [[package]]
 name = "dzbee"
-version = "0.1.1a2"
-description = "pack_name descr"
+version = "0.1.1a3"
+description = "pack_name descr "
 category = "main"
 optional = false
 python-versions = ">=3.8.3,<4.0.0"
@@ -168,12 +168,15 @@ cchardet = ">=2.1.7,<3.0.0"
 icecream = ">=2.1.1,<3.0.0"
 install = ">=1.3.5,<2.0.0"
 Jinja2 = ">=3.1.2,<4.0.0"
-json-de2zh = "0.1.1-alpha.0"
+json-de2zh = ">=0.1.1,<0.2.0"
 logzero = ">=1.7.0,<2.0.0"
 Morfessor = ">=2.0.6,<3.0.0"
 polyglot = ">=16.7.4,<17.0.0"
 typer = ">=0.4.1,<0.5.0"
 XlsxWriter = ">=3.0.3,<4.0.0"
+
+[package.extras]
+plot = ["holoviews (>=1.14.9,<2.0.0)", "plotly (>=5.8.0,<6.0.0)", "seaborn (>=0.11.2,<0.12.0)"]
 
 [[package]]
 name = "environs"
@@ -341,7 +344,7 @@ python-versions = ">=3.6"
 
 [[package]]
 name = "json-de2zh"
-version = "0.1.1a0"
+version = "0.1.1"
 description = "pack_name descr"
 category = "main"
 optional = false
@@ -802,7 +805,7 @@ python-versions = ">=3.7"
 
 [[package]]
 name = "tomlkit"
-version = "0.10.2"
+version = "0.11.0"
 description = "Style preserving TOML library"
 category = "dev"
 optional = false
@@ -896,7 +899,7 @@ python-versions = ">=3.4"
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.8.3"
-content-hash = "b7640b02525921824cf6f2337ecb09d5dd8b580a8c0ac759408fef54560379d5"
+content-hash = "e9e0b855e32637f88a7fe1defc7ee188e167726c6599a6828fb6d1ead9c5f6aa"
 
 [metadata.files]
 about-time = [
@@ -983,8 +986,8 @@ de2en = [
     {file = "de2en-0.1.1a1.tar.gz", hash = "sha256:9af3dc1b42cacff5e4dbd88ea9c4646bd736d6f8179ed9f2fae7abf8c54604a1"},
 ]
 dzbee = [
-    {file = "dzbee-0.1.1a2-py3-none-any.whl", hash = "sha256:fe1c4e80be236a66639dba2ed7f1c71497def05e9a6eea838264ea9d92543426"},
-    {file = "dzbee-0.1.1a2.tar.gz", hash = "sha256:24dadb5fa6606d4fd54d28eb34db2126ce078a4a8b5032090dba2856ed906091"},
+    {file = "dzbee-0.1.1a3-py3-none-any.whl", hash = "sha256:f0acb0413ce15f8577f2bb0a49513d3786f7af644c39aec7367e1941a14edc07"},
+    {file = "dzbee-0.1.1a3.tar.gz", hash = "sha256:f0aab560229c3560c9614a61fdb71fc519402e935f0e632ce12e98516bd59fa0"},
 ]
 environs = [
     {file = "environs-9.5.0-py2.py3-none-any.whl", hash = "sha256:1e549569a3de49c05f856f40bce86979e7d5ffbbc4398e7f338574c220189124"},
@@ -1041,8 +1044,8 @@ joblib = [
     {file = "joblib-1.1.0.tar.gz", hash = "sha256:4158fcecd13733f8be669be0683b96ebdbbd38d23559f54dca7205aea1bf1e35"},
 ]
 json-de2zh = [
-    {file = "json_de2zh-0.1.1a0-py3-none-any.whl", hash = "sha256:ae20c3296912e8c9a013ed53ff361cc18e0f1524f2641fb86e2c4e65994dc199"},
-    {file = "json_de2zh-0.1.1a0.tar.gz", hash = "sha256:ff15c6418d52340d401dc69854c6d90b088aa5d535930c4d73ea4d0aca8161ca"},
+    {file = "json_de2zh-0.1.1-py3-none-any.whl", hash = "sha256:ba35f03c3235f048f1f7f2ef73ebe53659723f36f54c2651d27aa8632c7b1e22"},
+    {file = "json_de2zh-0.1.1.tar.gz", hash = "sha256:53b52b59402d1a38fba6afcfdf4c157f09f65dadc4f19a0b029d543074e83d98"},
 ]
 logzero = [
     {file = "logzero-1.7.0-py2.py3-none-any.whl", hash = "sha256:23eb1f717a2736f9ab91ca0d43160fd2c996ad49ae6bad34652d47aba908769d"},
@@ -1413,8 +1416,8 @@ tomli = [
     {file = "tomli-2.0.1.tar.gz", hash = "sha256:de526c12914f0c550d15924c62d72abc48d6fe7364aa87328337a31007fe8a4f"},
 ]
 tomlkit = [
-    {file = "tomlkit-0.10.2-py3-none-any.whl", hash = "sha256:905cf92c2111ef80d355708f47ac24ad1b6fc2adc5107455940088c9bbecaedb"},
-    {file = "tomlkit-0.10.2.tar.gz", hash = "sha256:30d54c0b914e595f3d10a87888599eab5321a2a69abc773bbefff51599b72db6"},
+    {file = "tomlkit-0.11.0-py3-none-any.whl", hash = "sha256:0f4050db66fd445b885778900ce4dd9aea8c90c4721141fde0d6ade893820ef1"},
+    {file = "tomlkit-0.11.0.tar.gz", hash = "sha256:71ceb10c0eefd8b8f11fe34e8a51ad07812cb1dc3de23247425fbc9ddc47b9dd"},
 ]
 tqdm = [
     {file = "tqdm-4.64.0-py2.py3-none-any.whl", hash = "sha256:74a2cdefe14d11442cedf3ba4e21a3b84ff9a2dbdc6cfae2c34addb2a14a5ea6"},

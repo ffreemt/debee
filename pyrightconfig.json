@@ -1,9 +1,9 @@
 {
    "include": ["tests", "debee"],
   "venvPath": ".venv",
-  "reportTypeshedErrors": false,
+  "reportTypeshedErrors": true,
   "reportMissingImports": true,
   "reportMissingTypeStubs": false,
-  "pythonVersion": "3.7",
+  "pythonVersion": "3.8",
   "ignore": []
 }

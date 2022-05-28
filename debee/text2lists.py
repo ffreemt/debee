@@ -1,23 +1,24 @@
 """Separate text to zh en lists."""
 # pylint: disable=unused-import, too-many-locals, invalid-name, too-many-branches, too-many-statements,
 
-
 # from typing import Tuple,
 from typing import Iterable, List, Optional, Tuple, Union  # noqa
 
 import numpy as np
-
-# from radiobee.lists2cmat import lists2cmat  # use fast_scores
-# from radiobee.detect import detect
-# from fast_scores.gen_cmat import gen_cmat  # pylint: disable=import-error
-
-from json_de2zh.gen_cmat import gen_cmat
 from logzero import logger
 
 # from fastlid import fastlid
 from polyglot.text import Detector
 
-from dzbee.detect import detect
+# from dzbee.detect import detect
+from debee.detect import detect
+
+# from json_de2zh.gen_cmat import gen_cmat
+from debee.gen_cmat import gen_cmat
+
+# from radiobee.lists2cmat import lists2cmat  # use fast_scores
+# from radiobee.detect import detect
+# from fast_scores.gen_cmat import gen_cmat  # pylint: disable=import-error
 
 
 def text2lists(
@@ -75,7 +76,12 @@ def text2lists(
 
     for elm in [_ for _ in text.splitlines() if _.strip()]:
         # lang, _ = fastlid(elm)
-        lang = detect(elm, set_languages)
+        try:
+            lang = detect(elm, set_languages)
+        except Exception:
+            lang = "en"
+            logger.warning("Cant detect: %s[20]...setting to %s", elm[:20], lang)
+
         if lang == lang0:
             res.append(elm)
         else:

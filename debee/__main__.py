@@ -3,8 +3,12 @@
 from pathlib import Path
 from textwrap import dedent
 from typing import List, Optional
+
 import logzero
 import typer
+
+# from debee.gen_pairs import gen_pairs
+from aset2pairs import aset2pairs
 from icecream import ic
 from icecream import install as ic_install
 from logzero import logger
@@ -12,11 +16,9 @@ from set_loglevel import set_loglevel
 
 from debee import __version__, debee
 
-# from debee.gen_pairs import gen_pairs
-from aset2pairs import aset2pairs
-
 # from debee.cmat2html import cmat2html
-from debee.loadtext import loadtext
+# from debee.loadtext import loadtext
+from debee.loadparas import loadtext
 from debee.save_xlsx_tsv_csv import save_xlsx_tsv_csv
 from debee.text2lists import text2lists
 

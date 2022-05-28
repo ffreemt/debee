@@ -8,8 +8,8 @@ import numpy as np
 import pandas as pd
 from logzero import logger
 
-from dzbee.color_map import color_map
-from dzbee.gen_filename import gen_filename
+from debee.color_map import color_map
+from debee.gen_filename import gen_filename
 
 
 def save_xlsx_tsv_csv(

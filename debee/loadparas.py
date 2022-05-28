@@ -1,4 +1,5 @@
 """Load file content to text.
+
 org mypython/loadtext.py
 
 Check encoding and load a file to text.
@@ -16,7 +17,7 @@ magic.from_file("testdata/test.pdf")
 original load_textrev
 refer to load_paras.py
 """
-# pylint: disable=line-too-long, unused-variable, unused-import
+# pylint: disable=line-too-long, unused-variable, unused-import, duplicate-code
 
 from pathlib import Path
 from typing import List, Optional, Union  # noqa
