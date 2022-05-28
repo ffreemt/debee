@@ -21,8 +21,11 @@ jobs:
       - uses: abatilo/actions-poetry@v2.0.0
         with:
           poetry-version: ${{ matrix.poetry-version }}
-      - name: Install packages
-        run: poetry install  # --no-dev
+      - name: Install libicu-dev icu pycld2 and packages
+        run: |
+          sudo apt-get install libicu-dev pkg-config
+          poetry add pyicu==2.8 pycld2
+          poetry install  # --no-dev
       - name: Run flake8
         run: |
           poetry run flake8 --exit-zero

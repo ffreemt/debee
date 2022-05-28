@@ -3,6 +3,21 @@
 
 align de-en texts, fast
 
+## Pre-install
+    `pyicu`, `pycld2`, `fasttext` (`polyglot` depends on pyicu` and `pycld2` while fastlid depends on `fasttext`).
+### Linux and friends
+```bash
+apt-get install libicu-dev pkg-config
+pip install pyicu==2.8 pycld2 fasttext
+# poetry add pyicu==2.8 pycld2 fasttext
+```
+### Windows
+```
+# https://www.lfd.uci.edu/~gohlke/pythonlibs/, e.g.
+pip install pycld2-0.41-cp38-cp38-win_amd64.whl PyICU-2.8.1-cp38-cp38-win_amd64.whl fasttext-0.9.2-cp38-cp38-win_amd64.whl
+```
+If you have C++ in your Windows, simply ``pip install pyicu==2.8 pycld2 fasttext`` as for Linux.
+
 ## Install it
 
 ```shell
